@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="ressources/logo.png">
+    <title>Kanjiru</title>
+</head>
+<body>
+    <div class="back_nav">
+        <img src="ressources/bx-menu.png" width="40px" onclick="burger_show()" id="burger">
+        <nav id="menu">
+            <div class="menu">
+                <img src="ressources/bx-x.png" width="40px" class="burger show" onclick="burger_hide()">
+                <a href="index.html" class="lang main show">
+                    <img src="ressources/france.png" alt="Flag_Fr" style="width:20px; margin-right: 3px; border-radius: 5px;"> 
+                    Fr
+                </a>
+                <a href="#product" class="main">Product</a>
+                <a href="#vision" class="main">Vision</a>
+                <a href="#contact" class="main unshow">Contact</a>
+                <a href="https://www.instagram.com/kanjiru_paris/" target="_blank" class="main show">
+                    <img src="ressources/bxl-instagram.png" alt="Instagram" width="25px" class="reseau">
+                </a>
+                <a href="https://www.linkedin.com/company/kanjiru-lab/" target="_blank" class="main show">
+                    <img src="ressources/bxl-linkedin.png" alt="LinkedIn" width="25px" class="reseau">
+                </a>
+            </div>
+        </nav>
+        <ul class="menu corner unshow">
+            <li>
+                <a href="https://www.instagram.com/kanjiru_paris/" target="_blank">
+                    <img src="ressources/bxl-instagram.png" alt="Instagram" width="25px" class="reseau">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/kanjiru-lab/" target="_blank">
+                    <img src="ressources/bxl-linkedin.png" alt="LinkedIn" width="25px" class="reseau">
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="lang">
+                    <img src="ressources/france.png" alt="Flag_Fr" style="width:20px; margin-right: 3px; border-radius: 5px;"> 
+                    Fr
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="top">
+        <div class="title">
+            <img src="ressources/logo.png" alt="Logo_Kanjiru" width="100px">
+            <h1>Kanjiru</h1>
+        </div>
+        <h2 class="spinny-wrapper">
+            <span>Engage you teams in your <span class="show" style="color: #00509D;">projects.</span></span>
+            <span class="spinny-words">
+                <span>projects.</span>
+                <span>projets.</span>
+                <span>プロジェクト.</span>
+                <span>proyectos.</span>
+                <span>프로젝트.</span>
+                <span>projekte.</span>
+                <span>projects.</span>
+            </span>
+        </h2>
+        <h3>
+            A solution that allows you to summarize the content of your folders and files in audio or video.
+        </h3>
+    </div>
+    <div class="form" id="product">
+        <form method="post" action="php/send_mail.php">
+            <input type="text" placeholder="mail" class="input_mail" name="email">
+            <input type="submit" value="Try for free" class="button" >
+        </form>
+    </div>
+    <div class="product">
+        <div class="text">
+            <div class="container">
+                <img src="ressources/bxs-timer.png" alt="Time">
+                <p>Save time in 2 clicks.</p>
+            </div>
+            <div class="container">
+                <img src="ressources/bx-child.png" alt="Child" >
+                <p>Simplify your onboarding processes</p>
+            </div>
+        </div>
+        <video controls autoplay muted id="vision">
+            <source src="ressources/Kanjiru - Idée Nouvelle Solution.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="vision">
+        <h2>
+            Our vision
+        </h2>
+        <p>
+            Time is a resource that professionals in all sectors critically lack.
+            It is urgent to offer solutions to organizations so they can better manage it.
+            So they can turn it into an ally.<br>
+        </p> 
+        <p>
+            We believe that a new relationship with time is possible, that society aspires 
+            to use its time more intelligently, more sustainably. Paradoxically, we are living 
+            in an era of imposed urgency, of the vanishing of time. It is vital to give it back 
+            its rightful place, to value it appropriately. Our technologies enable this 
+            transformation, allowing us to live richer lives, more intense experiences.
+        </p>
+        <div class="back"></div>
+    </div>
+    <div class="partenaire">
+        <h2>They help us design our product</h2>
+        <div class="logo">
+            <img src="ressources/suez.png" alt="" width="110px">
+            <img src="ressources/hologic.png" alt="" width="110px">
+            <img src="ressources/technord.png" alt="" width="110px">
+            <img src="ressources/visiativ.png" alt="" width="110px">
+            <img src="ressources/bpce.png" alt="" width="110px">
+        </div>
+    </div>
+    <div class="partenaire" id="contact" style="background: linear-gradient(325deg, rgba(255,255,255) 0%, rgba(71,153,232,0.1) 34%, rgba(71,153,232,0.1) 67%, rgba(255,255,255) 100%);">
+        <h2>Contact</h2>
+        <div class="logo">
+            <a href="https://www.instagram.com/kanjiru_paris/" target="_blank" class="reseau">
+                <img src="ressources/bxl-instagram_black.png" target="_blank" alt="" width="90px"></a>
+            <a href="https://www.linkedin.com/company/kanjiru-lab/" class="reseau">
+                <img src="ressources/bxl-linkedin_black.png" alt="" width="90px">
+            </a>
+            <a onclick="show()" class="reseau">
+                <img src="ressources/bxl-mail_black.png" alt="" width="90px">
+            </a>
+        </div>
+    </div>
+    <div id="message" style="display: none;">
+        <form class="message" method="post" action="php/send_message.php">
+            <a class="cross" onclick="hide()">X</a>
+            <p>To : <b style="color:#00509D">contact@kanjiru.co </b></p>
+            <p>From : <input type="text" class="mail_from" name="email"></p>
+            <p>Object : <input type="text" class="mail_from" name="objet"></p>
+            <p><textarea class="text_message" name="content"></textarea></p>
+            <p><input type="submit" class="button" style="padding: 5px; margin:0 0 20px 10px;" value="Send"></p>
+        </form>
+    </div>
+
+</body>
+<footer>
+    <div style="text-align: center;">
+        contact@kanjiru.co
+    </div>
+    <div>
+        © Kanjiru 2024 <img src="ressources/logo.png" width="15px">
+    </div>
+    <div>
+        <a href="pages/mentions.html" target="_blank" style="color: white;">Terms & conditions</a>
+    </div>
+</footer>
+<script>
+    function burger_show() { 
+        document.getElementById("menu").style.display="block";
+        document.getElementById("burger").style.display="none";
+    }
+
+    function burger_hide() { 
+        document.getElementById("menu").style.display="none";
+        document.getElementById("burger").style.display="block";
+    }
+
+    function show() { 
+        document.getElementById("message").style.display="block";
+    }
+
+    function hide() { 
+        document.getElementById("message").style.display="none";
+    }
+
+    const constraints = {
+        email: {
+            presence: { allowEmpty: false },
+            email: true
+        },
+    };
+ 
+    const form = document.getElementById('contact-form');
+ 
+    form.addEventListener('submit', function (event) {
+      const formValues = {
+          email: form.elements.email.value,
+      };
+ 
+      const errors = validate(formValues, constraints);
+ 
+      if (errors) {
+        event.preventDefault();
+        const errorMessage = Object
+            .values(errors)
+            .map(function (fieldValues) { return fieldValues.join(', ')})
+            .join("\n");
+ 
+        alert(errorMessage);
+      }
+    }, false);
+
+</script>
+</html> 
